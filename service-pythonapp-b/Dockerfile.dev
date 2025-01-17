@@ -1,0 +1,15 @@
+FROM python:3.11
+
+WORKDIR /app
+
+# display standard output
+ENV PYTHONUNBUFFERED=1
+# install dependencies
+COPY requirements.txt /app
+RUN pip3 install -r requirements.txt --no-cache-dir
+
+RUN adduser vscode
+RUN groupadd docker
+RUN usermod -aG docker vscode
+
+WORKDIR /app

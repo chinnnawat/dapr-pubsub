@@ -1,0 +1,7 @@
+Flask==2.3.2
+pytest==6.2.5
+requests==2.30.0
+requests-mock==1.10.0
+types-requests
+environs==9.5.0
+prometheus-flask-exporter
