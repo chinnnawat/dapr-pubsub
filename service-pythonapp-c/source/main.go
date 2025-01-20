@@ -16,6 +16,7 @@ func getAPIData(w http.ResponseWriter, r *http.Request) {
 	logRequest(r) // Log the request details
 	if r.Method == http.MethodGet {
 		log.Printf("Request body: %s", string(body))
+		datetimeNow := time.Now()
 		log.Printf("Current time: %s", datetimeNow.Format("2006-01-02 15:04:05"))
 		fmt.Fprintln(w, "message from service-c")
 	} else {
