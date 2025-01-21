@@ -1,0 +1,6 @@
+[user]
+	email = chinnawat.w@opsta.co.th
+[init]
+	defaultBranch = main
+[credential]
+	helper = "!f() { /home/node/.vscode-server/bin/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/node /tmp/vscode-remote-containers-4ed4e4e4-d15a-446a-921f-116c2c617a78.js git-credential-helper $*; }; f"
