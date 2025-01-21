@@ -7,8 +7,8 @@ services:
         volumes:
             - rabbitdata:/var/lib/rabbitmq/data/
         environment:
-            - RABBITMQ_DEFAULT_USER=singleportal
-            - RABBITMQ_DEFAULT_PASS=singleportal
+            - RABBITMQ_DEFAULT_USER=username
+            - RABBITMQ_DEFAULT_PASS=password
 
     service-nodeapp-a:
         container_name: "service-nodeapp-a"

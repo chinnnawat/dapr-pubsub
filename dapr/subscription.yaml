@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v2alpha1
+kind: Subscription
+metadata:
+    name: message-to-phthonapp-b
+spec:
+    topic: message-to-phthonapp-b
+    routes:
+        default: /api/data
+    pubsubname: pubsub
+scopes:
+    - service-pythonapp-b
+    - service-pythonapp-c

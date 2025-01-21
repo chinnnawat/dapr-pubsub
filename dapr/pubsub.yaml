@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+    name: pubsub
+spec:
+    type: pubsub.rabbitmq
+    version: v1
+    metadata:
+        - name: connectionString
+          value: "amqp://username:password@rabbitmq:5672"
+        - name: concurrencyMode
+          value: single # or parallel
