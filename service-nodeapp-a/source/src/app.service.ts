@@ -17,7 +17,7 @@ export class AppService {
         console.log(response.data);
       });
 
-    return 'Check the logs for the response from Service B, C';
+    return 'Check the logs for the response from Service B, C from invoke';
   }
 
   pubsub(): any {
@@ -37,6 +37,6 @@ export class AppService {
         console.log(response.status);
       });
 
-    return 'Check the logs for the response from Service B, C';
+    return 'Check the logs for the response from Service B, C from pubsub';
   }
 }

@@ -15,6 +15,12 @@ func logRequest(r *http.Request) {
 func getAPIData(w http.ResponseWriter, r *http.Request) {
 	logRequest(r) // Log the request details
 	if r.Method == http.MethodGet {
+		body, err := ioutil.ReadAll(r.Body)
+		if err != nil {
+			log.Println("Failed to read request body:", err)
+			http.Error(w, "Failed to read request body", http.StatusInternalServerError)
+			return
+		}
 		log.Printf("Request body: %s", string(body))
 		datetimeNow := time.Now()
 		log.Printf("Current time: %s", datetimeNow.Format("2006-01-02 15:04:05"))
